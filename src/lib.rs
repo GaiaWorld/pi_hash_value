@@ -73,7 +73,7 @@ impl str::FromStr for H32 {
     type Err = FromHexError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let vec = try!(s.from_hex());
+        let vec = s.from_hex()?;
         match vec.len() {
             4 => {
                 let mut result = [0u8; 4];
@@ -259,7 +259,7 @@ impl str::FromStr for H48 {
     type Err = FromHexError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let vec = try!(s.from_hex());
+        let vec = s.from_hex()?;
         match vec.len() {
             6 => {
                 let mut result = [0u8; 6];
@@ -445,7 +445,7 @@ impl str::FromStr for H160 {
     type Err = FromHexError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let vec = try!(s.from_hex());
+        let vec = s.from_hex()?;
         match vec.len() {
             20 => {
                 let mut result = [0u8; 20];
@@ -631,7 +631,7 @@ impl str::FromStr for H256 {
     type Err = FromHexError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let vec = try!(s.from_hex());
+        let vec = s.from_hex()?;
         match vec.len() {
             32 => {
                 let mut result = [0u8; 32];
@@ -830,7 +830,7 @@ impl str::FromStr for H512 {
     type Err = FromHexError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let vec = try!(s.from_hex());
+        let vec = s.from_hex()?;
         match vec.len() {
             64 => {
                 let mut result = [0u8; 64];
@@ -1016,7 +1016,7 @@ impl str::FromStr for H520 {
     type Err = FromHexError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let vec = try!(s.from_hex());
+        let vec = s.from_hex()?;
         match vec.len() {
             65 => {
                 let mut result = [0u8; 65];

@@ -2,6 +2,11 @@
 name = "pi_hash_value"
 version = "0.1.0"
 authors = ["yineng <dev@dev.com>"]
+edition = "2021"
+description = "Encrypted hash algorithm"
+repository = "https://github.com/GaiaWorld/pi_hash_value.git"
+license = "MIT OR Apache-2.0"
+keywords = ["pi", "pi_hash_value", "HashCalculation"]
 
 [dependencies]
 rustc-serialize = "0.3"
